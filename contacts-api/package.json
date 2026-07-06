@@ -1,0 +1,22 @@
+{
+  "name": "contacts-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "author": "Jared Huayta",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "mongodb": "^7.4.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  },
+  "type": "module"
+}
