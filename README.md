@@ -9,29 +9,28 @@ This repository contains my coursework and assignments for the **CSE 341 - Web S
 - MongoDB Atlas
 - pnpm
 
-## Project Structure
+## Repository Structure
 
 ```text
 cse341/
-├── week01/
+├── week01/          # Learning Activities
 ├── week02/
 ├── week03/
-└── ...
+├── ...
+└── contacts-api/    # Course project
 ```
 
-## Week 01
+## Contacts API
 
-A simple REST API built with Express that serves professional profile data from MongoDB Atlas.
+The `contacts-api` folder contains the course project, which is developed incrementally throughout the semester. It is a REST API built with Node.js, Express, and MongoDB for managing contacts.
 
-### Run the project
+## Running a Project
+
+Navigate to the desired project folder and install its dependencies:
 
 ```bash
 pnpm install
 pnpm dev
 ```
 
-The API will be available at:
-
-```text
-http://localhost:8080
-```
+Each project contains its own README with setup instructions and available endpoints.
