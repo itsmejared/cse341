@@ -14,14 +14,10 @@ const initDb = async () => {
     return _db;
   }
 
-  try {
-    const client = await MongoClient.connect(process.env.MONGODB_URI);
-    _db = client.db();
-    console.log("Connected to MongoDB");
-    return _db;
-  } catch (err) {
-    throw err;
-  }
+  const client = await MongoClient.connect(process.env.MONGODB_URI);
+  _db = client.db();
+  console.log("Connected to MongoDB");
+  return _db;
 };
 
 const getDb = () => {

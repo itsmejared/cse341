@@ -18,9 +18,7 @@ export const getContactById = async (req, res) => {
   try {
     const userId = new ObjectId(req.params);
 
-    const contact = await getDb()
-      .collection("contacts")
-      .findOne({ _id: userId });
+    const contact = await getDb().collection("contacts").findOne({ _id: userId });
 
     if (!contact) {
       return res.status(404).json({
