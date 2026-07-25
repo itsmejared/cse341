@@ -1,0 +1,65 @@
+### Localhost Variables
+@hostname = localhost
+@port = 3000
+@host = http://{{hostname}}:{{port}}
+
+### ------------------------------------------------------------------
+### LOCALHOST TESTS
+### ------------------------------------------------------------------
+
+### GET all contacts
+GET {{host}}/contacts
+
+### GET contact by ID 
+GET {{host}}/contacts/6a4c66b72c97738b7731f46c
+
+### POST create contact
+POST {{host}}/contacts HTTP/1.1
+Content-Type: application/json
+
+{
+  "firstName": "John",
+  "lastName": "Doe",
+  "email": "johndoe@test.com",
+  "favoriteColor": "Blue",
+  "birthday": "1990-05-15"
+}
+
+### PUT update contact
+PUT {{host}}/contacts/6a4c66b72c97738b7731f46b HTTP/1.1
+Content-Type: application/json
+
+{
+  "firstName": "John",
+  "lastName": "Updated",
+  "email": "john.updated@test.com",
+  "favoriteColor": "Green",
+  "birthday": "1990-05-15"
+}
+
+### DELETE contact 
+DELETE {{host}}/contacts/6a4c66b72c97738b7731f46f HTTP/1.1
+
+
+### ------------------------------------------------------------------
+### RENDER TESTS 
+### ------------------------------------------------------------------
+@renderHost = https://cse341-pdv2.onrender.com
+
+### GET all contacts (Render)
+GET {{renderHost}}/contacts
+
+### GET contact by ID (Render)
+GET {{renderHost}}/contacts/6a4c66b72c97738b7731f46b
+
+### POST create contact (Render)
+POST {{renderHost}}/contacts HTTP/1.1
+Content-Type: application/json
+
+{
+  "firstName": "Jane",
+  "lastName": "Smith",
+  "email": "janesmith@test.com",
+  "favoriteColor": "Purple",
+  "birthday": "1995-08-20"
+}
