@@ -22,9 +22,6 @@ const config = {
   baseURL: process.env.BASE_URL || `http://localhost:${PORT}`,
   clientID: process.env.CLIENT_ID,
   issuerBaseURL: process.env.ISSUER_BASE_URL,
-  authorizationParams: {
-    response_mode: "query",
-  },
 };
 
 // Middleware
