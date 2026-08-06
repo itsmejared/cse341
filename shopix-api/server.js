@@ -34,7 +34,7 @@ app
   .use("/", routes)
   .use(errorHandler);
 
-// Rutas auxiliares de autenticación para pruebas/demostración
+// Auxiliary routes
 app.get("/auth-status", (req, res) => {
   res.json({
     isAuthenticated: req.oidc.isAuthenticated(),
